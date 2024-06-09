@@ -1,0 +1,17 @@
+{
+  "image": "mcr.microsoft.com/devcontainers/python:3.11",
+  "initializeCommand": "pip install -r requirements.txt",
+  "runArgs": ["--env-file", ".env"],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.azurecli",
+        "ms-azuretools.vscode-azurefunctions",
+        "HashiCorp.terraform",
+        "ms-vscode-remote.remote-containers"
+      ]
+    }
+  },
+  "postCreateCommand": "./.devcontainer/setup.sh",
+  "postStartCommand": "pre-commit install && pre-commit autoupdate && ./test/cloud-connect.sh"
+}

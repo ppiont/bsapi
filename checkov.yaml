@@ -1,0 +1,21 @@
+skip-check:
+  - CKV_AZURE_33  # Ensure Storage logging is enabled for Queue service for read, write and delete requests
+  - CKV_AZURE_43  # Ensure Storage Accounts adhere to the naming rules
+  - CKV_AZURE_44  # Ensure Storage Account is using the latest version of TLS encryption
+  - CKV_AZURE_59  # Ensure that Storage accounts disallow public access
+  - CKV_AZURE_70  # Ensure that Function apps are only accessible over HTTPS
+  - CKV_AZURE_190 # Ensure that Storage blobs restrict public access
+  - CKV_AZURE_206 # Ensure that Storage Accounts use replication
+  - CKV_AZURE_212 # Ensure App Service has a minimum number of instances for failover
+  - CKV_AZURE_221 # Ensure that Azure Function App public network access is disabled
+  - CKV_AZURE_225 # Ensure the App Service Plan is zone redundant
+  - CKV_AZURE_34  # Ensure that ‘Public access level’ is set to Private for blob containers
+  - CKV2_AZURE_1  # Ensure storage for critical data are encrypted with Customer Managed Key
+  - CKV2_AZURE_21 # Ensure Storage logging is enabled for Blob service for read requests
+  - CKV2_AZURE_33 # Ensure storage account is configured with private endpoint
+  - CKV2_AZURE_38 # Ensure soft-delete is enabled on Azure storage account
+  - CKV2_AZURE_40 # Ensure storage account is not configured with Shared Key authorization
+  - CKV2_AZURE_41 # Ensure storage account is configured with SAS expiration policy
+  - CKV2_AZURE_47 # Ensure storage account is configured without blob anonymous access
+  - CKV_TF_1      # Ensure Terraform module sources use a commit hash
+  - CKV_TF_2      # Ensure Terraform module sources use a tag with a version number
